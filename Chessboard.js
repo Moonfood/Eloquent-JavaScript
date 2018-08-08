@@ -27,7 +27,7 @@ const width = 8, height = 8;
 for (let y=0; y<height; y++) {
     let line = '';
     for (let x=0; x<width; x++) {
-        line += (x + y) % 2 == 0 ? ' ' : '#'; //If sum of x and y positions is even, determine grid character
+        line += (x + y) % 2 == 0 ? ' ' : '#'; //If sum of x and y positions is even
     }
     console.log(line + '\n');
 }
