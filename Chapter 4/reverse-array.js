@@ -16,7 +16,7 @@
 //Reverse array by creating a new array
 function reverseArray(array) {
     let newArray = [];
-    for(let i=array.length -1; i >= 0; i--) {
+    for(let i=array.length - 1; i >= 0; i--) {
         newArray.push(array[i]);
     }
     return newArray;
@@ -31,6 +31,7 @@ function reverseArrayInPlace(array) {
         array[i] = array[reverseIndex];
         array[reverseIndex] = temp;
     }
+    return array;
 }
 
 console.log(reverseArray(["A", "B", "C"]));
@@ -44,12 +45,9 @@ console.log(arrayValue);
 /*
     1. Which variant do you expect to be useful in more situations?
 
-    reverseArray, when given the same input, does not produce the same output.
-    reverseArray has the side effect of returning a new array every time it's called, regardless if the same array was input into it's arguments. 
-    Therefore, reverseArray is not a pure function. 
-
-    reverseArrayInPlace is more useful in more situations due to the fact that it's a pure function.
-    Pure functions are generally much more flexible, and reusable in new ways than non-pure functions.
+    reverseArrayInPlace is not a pure function because it modifies the array it's given. 
+    reverseArray is more useful in more situations due to the fact that it's a pure function,
+    and pure functions are generally much more flexible, and reusable in new ways than non-pure functions.
     
     2. Which one runs faster?
 
